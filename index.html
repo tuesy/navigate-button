@@ -22,7 +22,7 @@
 		// This just constructs an absolute URL if you give it a relative one
 		function getFullUrl(path) {
 			var currPath = location.pathname;
-			if (!currPath[currPath.length -1] === '/') {
+			if (currPath[currPath.length -1] !== '/') {
 				currPath = location.pathname.split('/').slice(0, -1).join('/') + '/';
 			}
 			return location.origin + currPath + path;
