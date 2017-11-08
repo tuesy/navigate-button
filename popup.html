@@ -11,15 +11,15 @@
 	<body>
 
 	<!-- change the altspace:// URL below to navigate to a different space -->
-	<a id="link" class="invisible" href="altspace://account.altvr.com/api/spaces/event-423982294806561074">go</a>
+	<a id="link" class="invisible" href="altspace://account.altvr.com/api/spaces/user-home-space-263169674588455295-644027">go</a>
 
 	<script>
-		// The code below just takes care of navigating to the space when the popup button is clicked. 
+		// The code below just takes care of navigating to the space when the popup button is clicked.
 		// You shouldn't have to change any of it.
 		altspace.getEnclosure().then(function (enc) {
 			var openCheckIntervalId = setInterval(function () {
 				if (enc.pixelsPerMeter < 10000) {
-					// The SDK doesn't directly support navigating to space, but we can do it indirectly by simulating a 
+					// The SDK doesn't directly support navigating to space, but we can do it indirectly by simulating a
 					// click on an altspace:// link.
 					document.getElementById('link').click();
 					clearInterval(openCheckIntervalId);
